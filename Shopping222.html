@@ -1,0 +1,189 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopping222</title>
+
+<link href="css/shoppingfluidgrid2.css" rel="stylesheet" type="text/css">
+<link href="css/shoppingboilerplate.css" rel="stylesheet" type="text/css">
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="respond.min.js"></script>
+ <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+ <script type="text/javascript" src="js/shopping222jq.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+	<div class="gridContainer clearfix">
+  <div id="LayoutDiv1"> 
+    <h1>My Shopping List<br /> </h1>
+  </div>
+</div> 
+  
+ <div class="menubox"> 
+  Menu<img src="Churchimages/menubox.png" alt="click menu here"> </div>
+  <div class="menufull">
+  <ul>
+     <li><a href="#">Link 1 </a></li>
+     <li><a href="#">Link 2</a></li>
+     <li><a href="#">Link 3</a></li>
+     <li><a href="#">Link 4</a></li>
+  </ul></div>
+  
+<div class="schedule">
+   <h3 class="changelist">Option: Change This Into A "To-Do" List</h3>
+    <p></p>
+   
+    <p><strong>-</strong> Prioritize each item</p>
+    <p><strong>-</strong> Add notes which can hide/show</p>
+ 	<p><strong>-</strong> Delete items or whole list</p>
+</div>
+
+<div class="location"><strong>With this feature you can add notes to each item, open and close the notes by clicking the "+" symbol!</strong><br /><br />
+..more notes maybe
+<p>&nbsp;</p>
+</div>
+
+
+<div class="main">
+   
+    <p>Click each item to cross it off...<br />
+      To Delete, click "X"
+      <br />
+      <br />
+ <h2>New Item:</h2>
+       
+	<div class="onediv">
+	<input name="inputtagname" id="inputtagname" value="Apples..."> 
+      <select id="prioritize" name="prioritize" onclick="makePriority">
+    <option>High</option>
+    <option>Med-Hi</option>
+    <option>Med-Low</option>
+    <option>Low</option>
+    </select> 
+    <button type="button" id="additem" name="additem"> Add </button> 
+
+	</div><!-- Close "onediv"-->
+
+
+
+  <!--  -   -   -  HERE IS THE SHOPPING LIST !!!! -  -   -   -   -->
+	 <div id="itemlist">
+		<p class="item" onclick="strikethrough()">Oranges <span class="closeout" onclick="closefunction()"> X </span></p>
+ </div>
+<!--  -   -   -   -   -   -   -   -   -  -  -->	
+
+   <!-- 
+     <script type="text/javascript"> // This script adds new list items
+  	$(document).ready(function() {
+     $('#additem').click(function(){
+         $("<p class='item'>" +$('#inputtagname').val() + "<div class='closeout'> X </div></p>").insertAfter('#itemlist p:last');
+         $('#inputtagname').val("");
+   });
+ });
+</script> 	 
+
+     <script type="text/javascript">   // This script is supposed to strikethrough purchased items
+   	$(document).ready(function() {      
+  $('.item').click(function(event){
+           console.log(event);
+           console.log(event.target);
+           $(event.target).addClass('strikethrough');
+       });
+   $('.closeout').click(function(event){  
+         $(event.target).parent('p').remove();
+     });
+    });
+    </script> 
+
+ -->
+
+
+		<!--  -   -   -   -   -   -   -   -   -  -  -->	
+ <br /><br />
+    
+		<div class="spacer"></div>
+		<div class="resett">Delete List</div>
+ </div>
+  	<br />
+
+<div class="bottom">
+  <p><strong><a href="http://www.xarismata.net/bthinkful/CelebmobileShoppingApp.html">Xarismata.net Shopping App</a></p>
+
+<br />
+</div>
+</div> <!-- Close wrapper div -->
+   <div class="footer">
+       <p>CONTACT INFORMATION</p>
+    <p>See our other APPS!</p>
+   <a href="" target="_top">App One</a><br />
+   <a href="" target="blank">App Two</a><br />
+   <a href="" target="_top">App Three</a>
+  </div>
+  
+   <p>&nbsp; </p>
+
+<!-- 
+  <script>		  //Find out what the parent > child elements are!
+$( "*", document.body ).each(function(event) {
+  var parentTag = $( this ).parent().get( 0 ).tagName;
+ $( this ).prepend( document.createTextNode( parentTag + " > " ) );
+});
+</script>
+ -->
+ 		<!-- 
+       <script type="text/javascript">  //  This script opens the top menu bar
+$(document).ready(function() {
+ $(".menubox").click(function() {
+   $(this).next(".menufull").slideToggle(330);
+   $('body').toggleClass('dimmer');
+  });
+});
+</script>
+
+
+
+       <script type="text/javascript">  // This script deletes the list
+$(document).ready(function() {
+ $(".resett").click(function() {
+   $('.item').remove();
+  });
+});
+</script>
+ -->
+<!-- 
+       <script type="text/javascript">   // This script is supposed to delete selected items
+  	$(document).ready(function() {
+     $('.closeout').click(function(event){
+    $(event.target).parent().remove();
+   });
+ });
+</script> 
+ -->
+  <!--
+   SIMILAR TO THIS
+   $(document).ready(function() {
+       $('.item').click(function(event){
+           console.log(event);
+           console.log(event.target);
+           $('this').addClass('strikethrough');
+       });
+       
+       $('li').click(function(event){
+          $("#result").textContent(event); 
+           
+       });
+       
+   });
+ -->
+</body>
+</html>
